@@ -81,7 +81,7 @@ function Services() {
 
       <motion.section {...fadeSettings} className="grid gap-10 rounded-[32px] border border-slate-200 bg-brand-dark/95 p-10 text-white shadow-brand lg:grid-cols-[1.2fr_0.8fr]">
         <div className="space-y-6">
-          <p className="text-sm uppercase tracking-[0.35em] text-brand-gold">Why INE?</p>
+          <p className="text-3xl font-bold text-brand-gold">Why INE?</p>
           <h2 className="text-3xl font-semibold">A maritime partner designed for energy-sector demands.</h2>
           <p className="max-w-xl text-base leading-8 text-slate-200">
             INE combines local expertise, certified crew management, and offshore logistics solutions to ensure your vessels remain compliant, ready, and operational.
@@ -100,7 +100,7 @@ function Services() {
       <motion.section {...fadeSettings} className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-brand">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-brand-dark">Service delivery</p>
+            <p className="text-sm uppercase tracking-[2px] text-brand-dark">Service delivery</p>
             <h2 className="mt-4 text-3xl font-semibold text-slate-950">Operational readiness from planning to execution.</h2>
             <p className="mt-6 max-w-xl text-base leading-8 text-slate-600">
               We pair fleet care, crew competence, and logistics coordination to support offshore and coastal projects across Nigerian waters.
@@ -108,12 +108,12 @@ function Services() {
           </div>
           <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-8">
             <div className="space-y-5">
-              <div className="rounded-3xl bg-brand-gold/10 p-5">
-                <p className="text-sm uppercase tracking-[0.35em] text-brand-dark">Responsive logistics</p>
+              <div className="rounded-3xl bg-brand-gold p-5">
+                <p className="text-sm uppercase tracking-[2px] font-bold text-brand-dark">Responsive logistics</p>
                 <p className="mt-3 text-base leading-7 text-slate-700">Flexible provisioning, spare parts delivery, and support for offshore missions.</p>
               </div>
               <div className="rounded-3xl bg-slate-900 p-5 text-white">
-                <p className="text-sm uppercase tracking-[0.35em] text-brand-gold">Vessel management</p>
+                <p className="text-sm uppercase tracking-[2px] font-bold text-brand-gold">Vessel management</p>
                 <p className="mt-3 text-base leading-7 text-slate-200">Technical oversight, regulatory compliance, and crew operations for reliable asset performance.</p>
               </div>
             </div>

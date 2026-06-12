@@ -39,21 +39,26 @@ function Contact() {
               Reach out for maritime support in vessel ownership, offshore logistics, and crew management across West Africa.
             </p>
           </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="mt-10 grid gap-6 grid-cols-1 md:grid-cols-2">
             <div className="rounded-[28px] bg-slate-50 p-6">
               <p className="text-sm uppercase font-bold text-brand-gold">Nigeria address</p>
               <p className="mt-3 text-base leading-7 text-slate-700">8 Ediale Street, GRA, Benin City</p>
-              <p className="mt-4 text-sm uppercase tracking-[0.35em] text-slate-500">Chief (Dr) Francis Inegbeniki</p>
-              <p className="mt-2 text-base leading-7 text-slate-700">MD CEO</p>
-              <p className="mt-2 text-base leading-7 text-slate-700">TEL: +234 706 333 3336</p>
-            </div>
-            <div className="rounded-[28px] bg-slate-50 p-6">
+          <hr className='mt-5 mb-5' />
               <p className="text-sm uppercase font-bold text-brand-gold">Ghana address</p>
               <p className="mt-3 text-base leading-7 text-slate-700">CJ, 209 Opener Street, off Fra-Fra-Ha, Forter Home, Adenta Municipal</p>
               <p className="mt-1 text-base leading-7 text-slate-700">Greater Accra Region, GD 105-5824</p>
-              <p className="mt-4 text-sm uppercase tracking-[0.35em] text-slate-500">Jolly Inegbeniki</p>
-              <p className="mt-2 text-base leading-7 text-slate-700">Director</p>
-              <p className="mt-2 text-base leading-7 text-slate-700">TEL: +234 813 965 0997</p>
+              
+            </div>
+
+              <div className="rounded-[28px] bg-slate-50 p-6">
+              <p className="text-sm uppercase font-bold text-brand-gold">DIRECT CONTACTS</p>
+              <p className="mt-4 text-sm font-bold text-slate-500">Chief (Dr) Francis Inegbeniki</p>
+              <p className="mt-2 text-base  text-slate-700">MD CEO</p>
+              <p className="mt-2 text-base  text-slate-700">Tel: +234 706 333 3336</p>
+              <hr className='mt-5 mb-5' />
+              <p className="mt-4 text-sm font-bold text-slate-500">Jolly Inegbeniki</p>
+              <p className="mt-2 text-base  text-slate-700">Director</p>
+              <p className="mt-2 text-base  text-slate-700">Tel: +234 813 965 0997</p>
             </div>
           </div>
           <div className="mt-10 rounded-[28px] bg-[#ffbf00] p-8 text-black">
