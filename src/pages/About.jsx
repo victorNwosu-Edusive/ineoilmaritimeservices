@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import officeImage from '../images/IMG-20260609-WA0014.jpg'
+import ScrollToTop from '../components/ScrollToTop'
 
 const fadeSettings = {
   initial: { opacity: 0, y: 30 },
