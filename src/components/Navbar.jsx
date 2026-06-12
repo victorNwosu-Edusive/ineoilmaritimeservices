@@ -87,7 +87,7 @@ function Navbar(toggleTheme) {
       id="mobile"
       className={`${
       isOpen ? 'translate-x-0' : 'translate-x-full'
-      } fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#040a17] transition-transform duration-500 ease-in-out md:hidden`}
+      } fixed inset-0 z-40 flex flex-col p-10 justify-center gap-8 bg-[#040a17] transition-transform duration-500 ease-in-out md:hidden`}
       >
       {links.map((item, idx) => (
         <NavLink
@@ -95,7 +95,7 @@ function Navbar(toggleTheme) {
           to={item.path}
           onClick={closeMenu}
           className={({ isActive }) =>
-            `text-2xl font-bold ${isActive ? 'text-brand-gold' : 'text-white'} transition-all ${
+            `text-2xl font-bold border-b-brand-gold/20 mb-2 pb-1 border-b-[1px] ${isActive ? 'text-brand-gold' : 'text-white'} transition-all ${
               isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`
           }
@@ -109,11 +109,11 @@ function Navbar(toggleTheme) {
 
       <button
         onClick={closeMenu}
-        className="absolute top-12 right-6 flex h-10 w-10 items-center justify-center text-white transition focus:outline-none"
+        className="absolute top-16 right-2 flex h-10 w-10 items-center justify-center text-white transition focus:outline-none"
         aria-label="Close menu"
       >
-        <span className="block h-0.5 w-6 rotate-45 bg-white" />
-        <span className="block h-0.5 w-6 -rotate-45 bg-white" />
+        <span className="block h-0.5 w-7 rotate-45 translate-y-0 bg-white" />
+        <span className="block h-0.5 w-7 -rotate-45 -translate-x-5 bg-white" />
       </button>
       </div>
 

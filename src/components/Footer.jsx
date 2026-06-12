@@ -30,6 +30,9 @@ function Footer() {
           <p>+234 706 333 3336</p>
         </div>
       </div>
+      <div className='text-center mt-28 text-black border-t-[1px] border-black/15 p-4'>
+            <p className='text-[13px] text-slate-500 md:text-md lg:text-md'> © {new Date().getFullYear()} Ine Oil Maritime Services</p>
+            </div>
     </footer>
   )
 }
