@@ -1,4 +1,6 @@
 ﻿import { motion } from 'framer-motion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import officeImage from '../images/IMG-20260609-WA0014.jpg'
 
 const fadeSettings = {
@@ -53,12 +55,18 @@ function Contact() {
               <div className="rounded-[28px] bg-slate-50 p-6">
               <p className="text-sm uppercase font-bold text-brand-gold">DIRECT CONTACTS</p>
               <p className="mt-4 text-sm font-bold text-slate-500">Chief (Dr) Francis Inegbeniki</p>
-              <p className="mt-2 text-base  text-slate-700">MD CEO</p>
-              <p className="mt-2 text-base  text-slate-700">Tel: +234 706 333 3336</p>
+              <p className="mt-2 text-base text-slate-700">MD CEO</p>
+              <p className="mt-2 flex items-center text-base text-slate-700">
+                <FontAwesomeIcon icon={faPhone} className="mr-3 text-brand-gold" />
+                +234 706 333 3336
+              </p>
               <hr className='mt-5 mb-5' />
               <p className="mt-4 text-sm font-bold text-slate-500">Jolly Inegbeniki</p>
-              <p className="mt-2 text-base  text-slate-700">Director</p>
-              <p className="mt-2 text-base  text-slate-700">Tel: +234 813 965 0997</p>
+              <p className="mt-2 text-base text-slate-700">Director</p>
+              <p className="mt-2 flex items-center text-base text-slate-700">
+                <FontAwesomeIcon icon={faPhone} className="mr-3 text-brand-gold" />
+                +234 813 965 0997
+              </p>
             </div>
           </div>
           <div className="mt-10 rounded-[28px] bg-[#ffbf00] p-8 text-black">

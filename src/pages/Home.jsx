@@ -1,4 +1,6 @@
 ﻿import { motion } from 'framer-motion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShip, faUserGear, faRoute } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import heroImage from '../images/IMG-20260609-WA0013.jpg'
 import showcaseImage from '../images/IMG-20260609-WA0015.jpg'
@@ -38,14 +40,17 @@ const aboutPoints = [
 const services = [
   {
     title: 'Fleet Ownership & Operations',
+    icon: faShip,
     description: 'End-to-end operation of a diverse, well-maintained fleet supporting coastal and offshore logistics.'
   },
   {
     title: 'Vessel Management',
+    icon: faUserGear,
     description: 'Comprehensive technical and crew management services designed to ensure performance and compliance.'
   },
   {
     title: 'Maritime Logistics Support',
+    icon: faRoute,
     description: 'Tailored supply chain and logistical solutions engineered for oil and energy operations.'
   }
 ]
@@ -151,7 +156,9 @@ function Home() {
         <div className="grid gap-6 lg:grid-cols-3">
           {services.map((item) => (
             <div key={item.title} className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-brand transition hover:-translate-y-1 hover:shadow-xl">
-              <p className="text-sm uppercase tracking-[0.35em] text-brand-gold">Service</p>
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-gold/10 text-brand-gold shadow-sm">
+                <FontAwesomeIcon icon={item.icon} className="h-6 w-6" />
+              </div>
               <h3 className="mt-6 text-2xl font-semibold text-slate-950">{item.title}</h3>
               <p className="mt-4 text-base leading-7 text-slate-600">{item.description}</p>
             </div>

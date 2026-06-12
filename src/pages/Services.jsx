@@ -1,4 +1,6 @@
 ﻿import { motion } from 'framer-motion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShip, faUserGear, faRoute } from '@fortawesome/free-solid-svg-icons'
 import serviceHero from '../images/IMG-20260609-WA0016.jpg'
 
 const fadeSettings = {
@@ -11,16 +13,19 @@ const fadeSettings = {
 const serviceCards = [
   {
     title: 'Fleet Ownership & Operations',
+    icon: faShip,
     description: 'End-to-end operation of a diverse, well-maintained fleet supporting coastal and offshore logistics across West Africa.',
     points: ['Coastal shipment support', 'Vessel oversight', 'Operational readiness']
   },
   {
     title: 'Vessel Management',
+    icon: faUserGear,
     description: 'Comprehensive technical and crew management services designed to ensure optimal vessel performance, regulatory compliance, and cost efficiency.',
     points: ['Technical maintenance', 'Crew certification', 'Regulatory compliance']
   },
   {
     title: 'Maritime Logistics Support',
+    icon: faRoute,
     description: 'Tailored supply chain and logistical solutions engineered for the unique demands of the oil, gas, and energy industries.',
     points: ['Cargo coordination', 'Offshore provisioning', 'Logistics planning']
   }
@@ -59,11 +64,11 @@ function Services() {
         </div>
       </motion.section>
 
-      <motion.section {...fadeSettings} className="grid gap-6 lg:grid-cols-3">
+      <motion.section {...fadeSettings} className="mx-4 grid gap-6 lg:grid-cols-3">
         {serviceCards.map((service) => (
           <div key={service.title} className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-brand transition hover:-translate-y-1 hover:shadow-xl">
-            <div className="inline-flex rounded-full bg-brand-gold/10 px-3 py-1 text-xs uppercase tracking-[0.35em] text-brand-dark">
-              Service
+            <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-gold/10 text-brand-gold shadow-sm">
+              <FontAwesomeIcon icon={service.icon} className="h-6 w-6" />
             </div>
             <h2 className="mt-6 text-2xl font-semibold text-slate-950">{service.title}</h2>
             <p className="mt-4 text-base leading-7 text-slate-600">{service.description}</p>
@@ -106,7 +111,7 @@ function Services() {
               We pair fleet care, crew competence, and logistics coordination to support offshore and coastal projects across Nigerian waters.
             </p>
           </div>
-          <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-8">
+          <div className="rounded-[28px] bg-slate-50 p-8">
             <div className="space-y-5">
               <div className="rounded-3xl bg-brand-gold p-5">
                 <p className="text-sm uppercase tracking-[2px] font-bold text-brand-dark">Responsive logistics</p>
