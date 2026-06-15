@@ -24,39 +24,39 @@ function Navbar(toggleTheme) {
 
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-white shadow-sm">
-      <div className="bg-slate-950 text-slate-100">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-[11px] font-bold uppercase md:px-6">
-          <span>24/7 Support: +234 706 333 3336</span>
-          <span>Nigeria / Ghana</span>
-        </div>
-      </div>
+    <header className="fixed inset-x-0 top-0 z-50 bg-white border-b-4 border-b-brand-gold shadow-sm">
 
       <div className="border-b border-slate-200/80 bg-white/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6 lg:px-8">
-          <div className="flex items-center gap-3">
-            <div className="flex h-16 w-16 items-center justify-center overflow-hidden">
+          <div className="flex items-center justify-center gap-3">
+            <div className="flex h-20 w-20 items-center justify-center overflow-hidden">
               <img src={logo} alt="INE Oil Maritime Services logo" className="h-full w-full object-contain" />
             </div>
             <div>
-              <p className="text-base font-bold text-slate-900">INE Oil Maritime Services</p>
-              <p className="text-sm font-semibold text-slate-600">Professional maritime solutions</p>
+              <p className=" uppercase font-black text-2xl lg:text-3xl leading-[20px] lg:leading-[20px] text-brand-dark"><span className='text-red-600'>INE Oil</span> & Maritime <br/> <span className='text-base lg:text-[15px] tracking-[2px] '>Services limited</span></p>
             </div>
           </div>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center uppercase gap-8 md:flex">
             {links.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition ${isActive ? 'text-brand-dark' : 'text-slate-600 hover:text-brand-dark'}`
+                  `text-sm font-bold transition ${isActive ? 'text-red-500 border-b-red-600 border-b-2' : 'text-brand-dark hover:text-red-600'}`
                 }
               >
                 {item.label}
               </NavLink>
             ))}
           </nav>
+
+          <div>
+            <NavLink to="/contact" className="hidden md:block px-4 py-2 bg-red-600 text-white font-sm font-bold hover:bg-red-700 transition"
+            >
+              GET IN TOUCH &#8599;
+            </NavLink>
+          </div>
 
             <div className="md:hidden flex items-center" onClick={toggleMenu}>
           <button className="text-slate-900 focus:outline-none relative w-6 h-6">
