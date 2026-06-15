@@ -13,7 +13,7 @@ function App() {
       <ScrollToTop />
       <div className="min-h-screen bg-slate-50 text-slate-900">
         <Navbar />
-        <main className="mx-auto max-w-7xl  pt-[150px] pb-16">
+        <main className="mx-auto max-w-7xl  pt-[90px] pb-16">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
