@@ -33,7 +33,7 @@ function Navbar(toggleTheme) {
               <img src={logo} alt="INE Oil Maritime Services logo" className="h-full w-full object-contain" />
             </div>
             <div>
-              <p className=" uppercase font-black text-2xl lg:text-3xl leading-[20px] lg:leading-[20px] text-brand-dark"><span className='text-red-600'>INE Oil</span> & Maritime <br/> <span className='text-base lg:text-[15px] tracking-[2px] '>Services limited</span></p>
+              <p className=" uppercase font-black text-xl lg:text-3xl leading-[20px] lg:leading-[20px] text-brand-dark"><span className='text-red-600'>INE Oil</span> & Maritime <br/> <span className='text-[12px] lg:text-[15px] tracking-[2px] '>Services limited</span></p>
             </div>
           </div>
 
