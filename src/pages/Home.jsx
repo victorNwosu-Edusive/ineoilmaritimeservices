@@ -119,7 +119,7 @@ function Home() {
       </motion.section>
 
 
-      <motion.section {...fadeSettings} className="bg-white mx-10 -mt-14 mb-20 relative border rounded-md p-11 grid md:grid-cols-4 gap-6 shadow-brand">
+      <motion.section {...fadeSettings} className="bg-white mx-7 md:mx-10 -mt-14 mb-20 relative border rounded-md p-6 lg:p-11 grid md:grid-cols-4 gap-6 shadow-brand">
         <div className="flex gap-5 items-center lg:border-r border-slate-200/70 pr-6">
           <div className=' bg-brand-dark/10 p-4 rounded-full'>
           <LifeBuoy size={25} className='text-brand-dark'/>
