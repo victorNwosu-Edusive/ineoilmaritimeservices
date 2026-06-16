@@ -1,4 +1,5 @@
-﻿import { motion } from 'framer-motion'
+﻿import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Headset, Ship, ShieldCheck, LifeBuoy } from 'lucide-react';
 import { faShip, faUserGear, faRoute, faLifeRing, faShieldAlt, faClock, faUsers } from '@fortawesome/free-solid-svg-icons'
@@ -6,6 +7,8 @@ import { Link } from 'react-router-dom'
 import heroImage from '../images/IMG-20260609-WA0013.jpg'
 import showcaseImage from '../images/aboutimage.png'
 import officeImage from '../images/IMG-20260609-WA0014.jpg'
+import fleetImage1 from '../images/IMG-20260609-WA0015.jpg'
+import fleetImage2 from '../images/IMG-20260609-WA0016.jpg'
 
 const fadeSettings = {
   initial: { opacity: 0, y: 36 },
@@ -67,14 +70,24 @@ const services = [
   }
 ]
 
-const advantagePoints = [
-  'Certified crews and technical teams',
-  'Strict regulatory and environmental compliance',
-  'Fast response logistics for offshore projects',
-  'Trusted local leadership with global standards'
+const fleetSlides = [
+  { src: heroImage, title: 'INE Support 1' },
+  { src: officeImage, title: 'INE Support 2' },
+  { src: fleetImage1, title: 'INE Support 3' },
+  { src: fleetImage2, title: 'INE Support 4' }
 ]
 
 function Home() {
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((current) => (current + 1) % fleetSlides.length)
+    }, 4500)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <div>
       <motion.section {...fadeSettings} className="relative mx-0 overflow-hidden shadow-brand">
@@ -196,7 +209,7 @@ function Home() {
             const Icon = item.icon
             const isFontAwesome = Icon && Icon.iconName
             return (
-              <div key={item.title} className="rounded-[32px] border border-[#2776ea]/20 bg-white/5 text-white p-4 shadow-brand transition hover:-translate-y-1 hover:shadow-xl">
+              <div key={item.title} className="rounded-[32px] border border-[#2776ea]/20 bg-[#01152c51] text-white p-4 shadow-brand transition hover:-translate-y-1 hover:shadow-xl">
                 <div className="inline-flex h-14 w-14 items-center justify-center p-10 text-white bg-white/5 rounded-full shadow-sm">
                   {isFontAwesome ? (
                     <FontAwesomeIcon icon={Icon} className="h-9 w-9 text-white" />
@@ -204,7 +217,7 @@ function Home() {
                     <Icon className="h-6 w-6 text-white" />
                   )}
                 </div>
-                <h3 className="mt-6 text-xl font-semibold text-white">{item.title}</h3>
+                <h3 className="mt-6 text-xl font-semibold leading-6 text-white">{item.title}</h3>
                 <p className="mt-4 text-sm leading-5 text-white">{item.description}</p>
               </div>
             )
@@ -229,54 +242,72 @@ function Home() {
                 </Link>
 
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {advantagePoints.map((item) => (
-              <div key={item} className="rounded-[28px] bg-slate-950/90 p-6 text-slate-100">
-                <p className="font-semibold">{item}</p>
-              </div>
-            ))}
+          <div className="relative overflow-hidden rounded-[32px] border border-slate-200 bg-slate-950/95 shadow-brand">
+            <div className="relative h-[420px]">
+              {fleetSlides.map((slide, index) => (
+                <div
+                  key={slide.title}
+                  className={`absolute inset-0 transition-opacity duration-700 ${index === activeSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                >
+                  <img src={slide.src} alt={slide.title} className="h-full w-full object-cover" />
+                  <div className="absolute inset-x-0 bottom-0 bg-slate-950/75 px-6 py-4">
+                    <p className="text-lg font-semibold text-white">{slide.title}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2">
+              {fleetSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveSlide(index)}
+                  className={`h-2.5 w-2.5 rounded-full transition-colors ${index === activeSlide ? 'bg-brand-gold' : 'bg-white/40 hover:bg-white'}`}
+                  aria-label={`Show slide ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </motion.section>
 
-      <motion.section {...fadeSettings} className="bg-[#002147] p-20 text-black mt-20">
-            <div className="grid lg:grid-cols-4 gap-7">
-              <div className="flex items-center p-2 gap-2 lg:border-r border-slate-200/30">
+      <motion.section {...fadeSettings} className="bg-[#002147] p-12 sm:p-16 text-black mt-20">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="flex flex-col items-center justify-center text-center gap-4 lg:flex-row lg:text-left lg:items-center lg:border-r lg:border-slate-200/30">
                 <div className="inline-flex p-4 items-center justify-center rounded-full bg-brand-gold/10 text-brand-gold">
                   <FontAwesomeIcon icon={faClock} className="h-7 w-7" />
                 </div>
                 <div>
-                  <p className="text-6xl text-brand-gold font-bold">15+</p>
+                  <p className="text-5xl text-brand-gold font-bold">15+</p>
                   <p className="text-white">Years of Experience</p>
                 </div>
               </div>
 
-              <div className="flex items-center p-2 gap-2 lg:border-r border-slate-200/30 ">
+              <div className="flex flex-col items-center justify-center text-center gap-4 lg:flex-row lg:text-left lg:items-center lg:border-r lg:border-slate-200/30">
                 <div className="inline-flex p-4 items-center justify-center rounded-full bg-brand-gold/10 text-brand-gold">
                   <FontAwesomeIcon icon={faShip} className="h-7 w-7" />
                 </div>
                 <div>
-                  <p className="text-6xl text-brand-gold font-bold">50+</p>
+                  <p className="text-5xl text-brand-gold font-bold">50+</p>
                   <p className="text-white">Vessels & Assets</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 lg:border-r border-slate-200/30">
+              <div className="flex flex-col items-center justify-center text-center gap-4  lg:flex-row lg:text-left lg:items-center lg:border-r lg:border-slate-200/30">
                 <div className="inline-flex p-4 items-center justify-center rounded-full bg-brand-gold/10 text-brand-gold">
                   <FontAwesomeIcon icon={faUsers} className="h-7 w-7" />
                 </div>
                 <div>
-                  <p className="text-6xl text-brand-gold font-bold">100+</p>
+                  <p className="text-5xl text-brand-gold font-bold">100+</p>
                   <p className="text-white">Satisfied Clients</p>
                 </div>
               </div>
 
-              <div className="flex p-2 items-center justify-center gap-2">
+              <div className="flex flex-col items-center justify-center text-center gap-4 lg:flex-row lg:text-left lg:items-center">
                 <div className="inline-flex p-4 items-center justify-center rounded-full bg-brand-gold/10 text-brand-gold">
                   <FontAwesomeIcon icon={faShieldAlt} className="h-7 w-7" />
                 </div>
                 <div>
-                  <p className="text-6xl text-brand-gold font-bold">100%</p>
+                  <p className="text-5xl text-brand-gold font-bold">100%</p>
                   <p className="text-white">Safety Commitment</p>
                 </div>
               </div>

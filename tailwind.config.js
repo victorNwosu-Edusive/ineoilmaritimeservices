@@ -9,7 +9,6 @@ module.exports = {
       colors: {
         brand: {
           dark: '#002147',
-          forest: '#134230',
           gold: '#ffbf00',
           slate: '#f8faf7'
         }

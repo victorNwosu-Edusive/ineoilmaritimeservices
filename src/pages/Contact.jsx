@@ -13,7 +13,7 @@ const fadeSettings = {
 function Contact() {
   return (
     <div className="space-y-16 pb-10">
-      <motion.section {...fadeSettings} className="mx-5 relative overflow-hidden rounded-[40px] bg-slate-950 text-white shadow-brand">
+      <motion.section {...fadeSettings} className="mx-3 relative overflow-hidden rounded-b-[40px] bg-slate-950 text-white shadow-brand">
         <div className="absolute inset-0">
           <img src={officeImage} alt="Maritime operations image" className="h-full w-full object-cover" />
           <div className="absolute inset-0 bg-brand-dark/85 mix-blend-multiply" />
@@ -77,13 +77,20 @@ function Contact() {
           </div>
         </div>
 
-        <div className="rounded-[32px] border border-slate-200 bg-slate-950 p-8 text-slate-100 shadow-brand">
-          <div className="rounded-[28px] overflow-hidden border border-slate-700 bg-slate-900/90">
-            <img src={officeImage} alt="Office and maritime operations" className="h-[420px] w-full object-cover" />
+        <div className="rounded-[32px] bg-transparent  p-8 text-black">
+          <div className="rounded-[28px] overflow-hidden border ">
+            <iframe
+              title="INE Oil and Maritime Services location map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.7100639484736!2d5.608161275761513!3d6.327246295364999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1041bcd5fd3107f9%3A0x4b1bd7f8d47de77d!2s8%20Ediale%20Street%2C%20GRA%2C%20Benin%20City%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1710000000000"
+              className="h-[420px] w-full border-0"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
           <div className="mt-8 space-y-4 text-slate-300">
-            <p className="text-sm uppercase tracking-[0.35em] text-brand-gold">Location</p>
-            <p className="text-base leading-7">A strong operational presence in Nigeria, ready to serve oil and maritime clients throughout West Africa.</p>
+            <p className="text-sm font-bold uppercase tracking-[2px] text-brand-gold">Location</p>
+            <p className="text-base text-slate-700 leading-7">A strong operational presence in Nigeria, ready to serve oil and maritime clients throughout West Africa.</p>
           </div>
         </div>
       </motion.section>

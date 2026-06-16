@@ -11,7 +11,7 @@ const fadeSettings = {
 function About() {
   return (
     <div className="space-y-16 pb-20">
-      <motion.section {...fadeSettings} className="mx-5 relative overflow-hidden rounded-[40px] bg-slate-950 text-white shadow-brand">
+      <motion.section {...fadeSettings} className="mx-3 relative overflow-hidden rounded-b-[40px] bg-slate-950 text-white shadow-brand">
         <div className="absolute inset-0">
                   <img src={officeImage} alt="Maritime operations image" className="h-full w-full object-cover" />
                   <div className="absolute inset-0 bg-brand-dark/85 mix-blend-multiply" />
@@ -31,7 +31,7 @@ function About() {
       </motion.section>
 
       <motion.section {...fadeSettings} className="grid gap-10 lg:grid-cols-2">
-        <div className="rounded-[32px] border border-slate-200 bg-[#023e8a] p-10 text-white shadow-brand">
+        <div className="rounded-[32px] border border-slate-200 bg-[#002147] p-10 text-white shadow-brand">
           <p className="text-sm uppercase tracking-[2px] font-bold text-brand-gold">Our Mission</p>
           <h2 className="mt-4 text-3xl font-semibold">Maximize asset value through safe, efficient vessel management.</h2>
           <p className="mt-6 text-base leading-8 text-slate-200">

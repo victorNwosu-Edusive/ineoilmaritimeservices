@@ -43,7 +43,7 @@ function Services() {
     <div className="space-y-16 pb-10">
       <motion.section
         {...fadeSettings}
-        className="mx-5 relative overflow-hidden rounded-[40px] bg-slate-950 text-white shadow-brand"
+        className="mx-3 relative overflow-hidden rounded-b-[40px] bg-slate-950 text-white shadow-brand"
       >
         <div className="absolute inset-0">
           <img src={serviceHero} alt="Offshore vessels and maritime logistics" className="h-full w-full object-cover" />
@@ -67,7 +67,7 @@ function Services() {
       <motion.section {...fadeSettings} className="mx-4 grid gap-6 lg:grid-cols-3">
         {serviceCards.map((service) => (
           <div key={service.title} className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-brand transition hover:-translate-y-1 hover:shadow-xl">
-            <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-brand-gold/10 text-brand-gold shadow-sm">
+            <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#002147] text-[#f8c007] shadow-sm">
               <FontAwesomeIcon icon={service.icon} className="h-6 w-6" />
             </div>
             <h2 className="mt-6 text-2xl font-semibold text-slate-950">{service.title}</h2>

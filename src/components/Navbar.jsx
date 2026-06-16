@@ -35,6 +35,7 @@ function Navbar(toggleTheme) {
             <div>
               <p className=" uppercase font-black text-xl lg:text-3xl leading-[20px] lg:leading-[20px] text-brand-dark"><span className='text-red-600'>INE Oil</span> & Maritime <br/> <span className='text-[12px] lg:text-[15px] tracking-[2px] '>Services limited</span></p>
             </div>
+             
           </div>
 
           <nav className="hidden items-center uppercase gap-8 md:flex">
@@ -43,7 +44,7 @@ function Navbar(toggleTheme) {
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-sm font-bold transition ${isActive ? 'text-red-500 border-b-red-600 border-b-2' : 'text-brand-dark hover:text-red-600'}`
+                  `text-[13px] font-bold transition ${isActive ? 'text-red-500 border-b-red-600 border-b-2' : 'text-brand-dark hover:text-red-600'}`
                 }
               >
                 {item.label}
@@ -52,7 +53,7 @@ function Navbar(toggleTheme) {
           </nav>
 
           <div>
-            <NavLink to="/contact" className="hidden md:block px-4 py-2 bg-red-600 text-white font-sm font-bold hover:bg-red-700 transition"
+            <NavLink to="/contact" className="hidden md:block px-4 py-2 bg-red-600 text-white text-sm font-bold hover:bg-red-700 transition"
             >
               GET IN TOUCH &#8599;
             </NavLink>
@@ -88,7 +89,7 @@ function Navbar(toggleTheme) {
       id="mobile"
       className={`${
       isOpen ? 'translate-x-0' : 'translate-x-full'
-      } fixed inset-0 z-40 flex flex-col p-10 justify-center gap-8 bg-[#040a17] transition-transform duration-500 ease-in-out md:hidden`}
+      } fixed inset-0 z-40 flex pt-20 flex-col p-10 justify-center gap-8 bg-[#002147] transition-transform duration-500 ease-in-out md:hidden`}
       >
       {links.map((item, idx) => (
         <NavLink
@@ -106,8 +107,9 @@ function Navbar(toggleTheme) {
         >
           {item.label}
         </NavLink>
+        
       ))}
-
+      <p className='absolute bottom-4 text-slate-400 text-[12px] text-center'> © {new Date().getFullYear()} Ine Oil Maritime Services</p>
       <button
         onClick={closeMenu}
         className="absolute top-16 right-2 flex h-10 w-10 items-center justify-center text-white transition focus:outline-none"
